@@ -12,10 +12,11 @@ pipeline {
                 }
             }
         }
-        stage('install) {
+        stage('install') {
             steps {
                 sh label: '', script: 'mvn install'
             }
+        }
           stage('deploy') {
             steps {
                 sh label: '', script: 'mvn deploy'
