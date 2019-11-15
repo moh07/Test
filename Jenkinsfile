@@ -8,7 +8,14 @@ node {
        sh "${mvnHOME}/bin/mvn package"
        
        }
-       stage('Build') {
+       
+}
+#!groovy
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
             steps {
                 echo 'Building..'
             }
@@ -23,5 +30,5 @@ node {
                 echo 'Deploying....'
             }
         }
-  
+    }
 }
