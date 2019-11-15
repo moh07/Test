@@ -3,28 +3,15 @@ pipeline {
 
     stages {
         
-        stage('build') {
+          stage("mvn build") {
             steps {
-                bat label: '', script: 'mvn install '
+                script {
+                    // If you are using Windows then you should use "bat" step
+                    // Since unit testing is out of the scope we skip them
+                    sh "mvn package -DskipTests=true"
+                }
             }
         }
         
-        
-        stage('checkout') {
-            steps {
-                git 'https://github.com/moh07/Test'
-            }
-        }
-        stage('Test') {
-            steps {
-                bat label: '', script: 'mvn test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-             bat label: '', script: 'mvn deploy'
-
-            }
-        }
     }
 }
