@@ -2,19 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        
+        stage('build') {
             steps {
-                echo 'Building..'
+                bat label: '', script: 'mvn install '
+            }
+        }
+        
+        
+        stage('checkout') {
+            steps {
+                git 'https://github.com/moh07/Test'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                bat label: '', script: 'mvn test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+             bat label: '', script: 'mvn deploy'
+
             }
         }
     }
