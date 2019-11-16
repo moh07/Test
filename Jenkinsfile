@@ -34,6 +34,6 @@ pipeline {
             mail bcc: '', body: 'Jenkins', cc: '', from: '', replyTo: '', subject: 'Test succes', to: 'mzehsabrine3@gmail.com'
             }
         }  
-        
+          }
     }
 }
