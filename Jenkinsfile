@@ -14,11 +14,13 @@ pipeline {
         }
         stage('install') {
             steps {
+                //install
                 sh label: '', script: 'mvn install'
             }
         }
           stage('deploy') {
             steps {
+                //deploy
                 sh label: '', script: 'mvn deploy'
             }
         }  
