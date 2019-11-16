@@ -2,7 +2,11 @@ pipeline {
     agent any
 
     stages {
-        
+        stage("mvn checkout") {
+            steps {
+                git 'https://github.com/moh07/Test.git'
+            }
+        }
           stage("mvn build") {
             steps {
                 script {
