@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>HelloWorld.tn</groupId>
   <artifactId>HelloWorld</artifactId>
-  <version>0.0.7-SNAPSHOT</version>
+  <version>0.0.8-SNAPSHOT</version>
   <name>Archetype - HelloWorld</name>
   <url>http://maven.apache.org</url>
   
