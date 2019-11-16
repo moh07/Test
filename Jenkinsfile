@@ -1,12 +1,7 @@
 pipeline {
     agent any
- // gg
+
     stages {
-        stage("mvn checkout") {
-            steps {
-                git 'https://github.com/moh07/Test.git'
-            }
-        }
         
           stage("mvn build") {
             steps {
@@ -19,21 +14,20 @@ pipeline {
         }
         stage('install') {
             steps {
-                //install
                 sh label: '', script: 'mvn install'
             }
         }
           stage('deploy') {
             steps {
-                
                 sh label: '', script: 'mvn deploy'
             }
-             stage('mail') {
+        }  
+                            // e "bat" step
+
+                  stage('Email notification') {
             steps {
-                
-            mail bcc: '', body: 'Jenkins', cc: '', from: '', replyTo: '', subject: 'Test succes', to: 'mzehsabrine3@gmail.com'
+        mail bcc: '', body: 'Jenkins', cc: '', from: '', replyTo: '', subject: 'Test succes', to: 'mzehsabrine3@gmail.com'
             }
         }  
-          }
     }
 }
