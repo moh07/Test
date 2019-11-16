@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+ // gg
     stages {
         stage("mvn checkout") {
             steps {
