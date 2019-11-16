@@ -31,7 +31,7 @@ pipeline {
              stage('mail') {
             steps {
                 
-                sh label: ''mail bcc: '', body: 'mriguel', cc: '', from: '', replyTo: '', subject: 'sucess', to: 'sabrine.mzeh3@gmail.com'', script: ''
+            mail bcc: '', body: 'Jenkins', cc: '', from: '', replyTo: '', subject: 'Test succes', to: 'mzehsabrine3@gmail.com'
             }
         }  
         
