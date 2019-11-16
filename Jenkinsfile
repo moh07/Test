@@ -7,7 +7,7 @@ pipeline {
                 git 'https://github.com/moh07/Test.git'
             }
         }
-        //TEST
+        
           stage("mvn build") {
             steps {
                 script {
