@@ -25,7 +25,7 @@ pipeline {
         }
           stage('deploy') {
             steps {
-                //deploy
+                
                 sh label: '', script: 'mvn deploy'
             }
              
