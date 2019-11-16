@@ -28,7 +28,11 @@ pipeline {
                 
                 sh label: '', script: 'mvn deploy'
             }
-             
+             stage('mail') {
+            steps {
+                
+                sh label: '', script: 'mail bcc: '', body: 'mriguel', cc: '', from: '', replyTo: '', subject: 'sucess', to: 'sabrine.mzeh3@gmail.com''
+            }
         }  
         
     }
