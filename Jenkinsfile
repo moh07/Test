@@ -14,6 +14,7 @@ pipeline {
         }
         stage('install') {
             steps {
+                //jj
                 sh label: '', script: 'mvn install'
             }
         }
