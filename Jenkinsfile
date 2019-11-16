@@ -27,7 +27,7 @@ pipeline {
                 //deploy
                 sh label: '', script: 'mvn deploy'
             }
-              //test
+             
         }  
         
     }
